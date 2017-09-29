@@ -1,0 +1,43 @@
+{
+  "name": "mundorecarga",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@intermaple/mundorecarga-ui": "git+https://github.com/yosmanyga/intermaple-mundorecarga-ui.git",
+    "@material-ui/icons": "^3",
+    "@yosmy/request": "git+https://github.com/yosmy/request.git",
+    "@yosmy/resolution": "git+https://github.com/yosmy/resolution.git",
+    "@yosmy/ui": "git+https://github.com/yosmy/mui-web-ui.git",
+    "history": "^4.7",
+    "prop-types": "^15.6",
+    "query-string": "^5.1",
+    "raven-js": "^3.26",
+    "react": "^16.6.3",
+    "react-app-polyfill": "^0.1",
+    "react-dom": "^16.6.3",
+    "react-ga": "^2.5.6",
+    "react-scripts": "^2.1.1",
+    "source-map-explorer": "^1.6",
+    "store": "^2.0",
+    "string-mask": "latest",
+    "typeface-roboto": "^0.0"
+  },
+  "scripts": {
+    "start": "node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node_modules/react-scripts/bin/react-scripts.js build && yarn sw-epilog",
+    "sw-epilog": "cat src/sw-epilog.js >> build/service-worker.js",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "test": "node_modules/react-scripts/bin/react-scripts.js test --env=jsdom",
+    "eject": "node_modules/react-scripts/bin/react-scripts.js eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://nginx:80"
+}
